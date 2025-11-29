@@ -1,0 +1,140 @@
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #edeef0;
+}
+* {
+    font-family: Arial;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: 28px;
+    background-color: #507299;
+    padding: 5px 0 5px 10vw;
+}
+footer {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    color: #808080;
+    padding: 5px;
+    font-size: 13px;
+}
+#language {
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    font-size: 11px;
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.button {
+    color: #507299;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    margin: 0 auto;
+    flex: 1;
+}
+#navigation {
+    width: 200px;
+    flex-shrink: 0;
+}
+#navigation > div {
+    margin: 10px 0;
+    padding: 5px;
+}
+#navigation > div:hover {
+    background-color: #e1e5eb;
+}
+#posts {
+    flex: 1;
+    margin: 10px;
+}
+#sidebar {
+    display: none;
+    width: 140px;
+    height: fit-content;
+    position: sticky;
+    top: 48px;
+}
+
+.entry {
+    max-width: 400px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #cdcdcd;
+}
+.entry:not(:first-child) {
+    margin-top: 10px;
+}
+.entry-body > img {
+    max-width: 100%;
+    height: auto;
+}
+.entry-body::selection {
+    color: #008049;
+    background: #e0e4ea;
+}
+.entry-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 2px solid #cdcdcd;
+}
+
+.widget {
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px #cdcdcd;
+}
+.widget:not(:first-child) {
+    margin-top: 10px;
+}
+.widget p {
+    background-color: #edeef0;
+}
+.widget-title {
+    font-weight: bold;
+    margin: 8px;
+}
+
+@media (min-width: 925px) {
+    #container {
+        width: 900px;
+    }
+    #sidebar {
+        display: block;
+    }
+}
+@media (max-width: 650px) {
+    #container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    #navigation {
+        width: 100%;
+        text-align: center;
+    }
+    #navigation > div {
+        display: inline-block;
+        margin: 10px;
+    }
+    #posts {
+        margin: auto;
+        padding-bottom: 10px;
+    }
+}
